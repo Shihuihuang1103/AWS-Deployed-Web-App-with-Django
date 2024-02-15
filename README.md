@@ -1,1 +1,1 @@
-# Polls-Web-Application-with-Django
+# Web App with Django Deployed on AWS Elastic Beanstalk
