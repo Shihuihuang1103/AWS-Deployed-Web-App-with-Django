@@ -22,7 +22,7 @@ deploy:
   bucket_name: "elasticbeanstalk-us-west-2-508829990173"
   on:
       branch: main
-   script:
+  script:
     - aws elasticbeanstalk describe-environments --region us-west-2 
 
 
