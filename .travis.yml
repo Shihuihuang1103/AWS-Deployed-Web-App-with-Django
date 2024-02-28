@@ -16,7 +16,7 @@ deploy:
   region: "us-east-1"
   app: "Poll_App"
   env: "django_env"
-  bucket_name: "elasticbeanstalk-us-west-2-pollapp"
+  bucket_name: "elasticbeanstalk-us-east-1-pollapp"
   on:
       branch: main
 
