@@ -1,0 +1,16 @@
+language: python
+
+python:
+  - 3.9
+
+env:
+  - SECRET_KEY='test'
+
+install:
+  - pip install -r requirements.txt
+
+before_scripts:
+  - python manage.py migrate
+
+script:
+  - python manage.py 
