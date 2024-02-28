@@ -8,10 +8,8 @@ install:
 
 before_script:
   - python manage.py migrate
-  - python manage.py collectstatic --noinput
 
 script:
-  - python manage.py
   - black --check .
   
 deploy:
