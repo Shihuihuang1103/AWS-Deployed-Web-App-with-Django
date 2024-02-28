@@ -1,0 +1,28 @@
+language: python
+
+python:
+    - 3.9
+
+install:
+  - pip install -r requirements.txt
+
+before_script:
+  - python manage.py migrate
+
+script:
+  - black --check .
+  
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $access_key_id
+  secret_access_key: $secret_access_key
+  region: "us-east-1"
+  app: "Poll_App"
+  env: "django_env"
+  bucket_name: "elasticbeanstalk-us-east-1-pollapp"
+  on:
+      branch: main
+
+
+
+
