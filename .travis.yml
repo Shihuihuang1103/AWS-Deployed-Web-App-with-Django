@@ -13,7 +13,7 @@ before_script:
 script:
   - black --check .
   - flake8
-  - coverage run --source=mysite,polls manage.py test
+  - coverage run manage.py test
 
 after_script:
   - coveralls
@@ -23,14 +23,13 @@ deploy:
   provider: elasticbeanstalk
   access_key_id: $access_key_id
   secret_access_key: $secret_access_key
-  region: "us-west-2"
-  app: "django-tutorial"
-  env: "django-env"
-  bucket_name: "elasticbeanstalk-us-west-2-508829990173"
+  region: "us-east-1"
+  app: "poll-application"
+  env: "poll-application-integration"
+  bucket_name: "elasticbeanstalk-us-east-1-508829990173"
   on:
       branch: main
-  script:
-    - aws elasticbeanstalk describe-environments --region us-west-2 
+
 
 
 
